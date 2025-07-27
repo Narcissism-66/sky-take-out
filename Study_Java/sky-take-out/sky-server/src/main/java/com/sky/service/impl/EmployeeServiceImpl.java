@@ -106,13 +106,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         //忽略不需要拷贝的字段（如自动生成的 createTime）
         LocalDateTime now = LocalDateTime.now();
-        employee.setCreateTime(now);
-        employee.setUpdateTime(now);
+//        employee.setCreateTime(now);
+//        employee.setUpdateTime(now);
 
         //TODO 需要修改为当前登陆用户的ID
-        employee.setCreateUser(BaseContext.getCurrentId());
-        employee.setUpdateUser(BaseContext.getCurrentId());
-        employeeMapper.save(employee);
+//        employee.setCreateUser(BaseContext.getCurrentId());
+//        employee.setUpdateUser(BaseContext.getCurrentId());
+        employeeMapper.insert(employee);
 
         return ;
     }
@@ -154,8 +154,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         BeanUtils.copyProperties(employeeDTO,employee);
 
         //特殊数据处理
-        employee.setCreateUser(BaseContext.getCurrentId());
-        employee.setUpdateTime(LocalDateTime.now());
+//        employee.setCreateUser(BaseContext.getCurrentId());
+//        employee.setUpdateTime(LocalDateTime.now());
 
         //修改数据
         employeeMapper.update(employee);

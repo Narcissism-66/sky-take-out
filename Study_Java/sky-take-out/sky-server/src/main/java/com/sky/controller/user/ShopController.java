@@ -1,4 +1,4 @@
-package com.sky.controller.admin.user;
+package com.sky.controller.user;
 
 /*
  * @Auther:fz

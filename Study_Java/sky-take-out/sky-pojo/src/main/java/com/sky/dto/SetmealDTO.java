@@ -1,13 +1,20 @@
 package com.sky.dto;
 
 import com.sky.entity.SetmealDish;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+@Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SetmealDTO implements Serializable {
 
     private Long id;

@@ -79,6 +79,5 @@ public class SetMealController {
     public Result<String> updateStatus(@PathVariable Integer status,Long id){
         setmealService.updateStatus(status,id);
         return Result.success("修改成功");
-
     }
 }
